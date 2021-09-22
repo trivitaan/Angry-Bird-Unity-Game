@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107749916}
   - component: {fileID: 107749917}
+  - component: {fileID: 107749918}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -163,6 +164,33 @@ MonoBehaviour:
   - {fileID: 1124581724}
   Enemies:
   - {fileID: 967608259}
+  TapCollider: {fileID: 107749918}
+--- !u!61 &107749918
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107749915}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.081251144, y: 1.3693242}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.281475, y: 8.810508}
+  m_EdgeRadius: 0
 --- !u!1 &340075636
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +656,7 @@ GameObject:
   - component: {fileID: 1124581725}
   - component: {fileID: 1124581724}
   m_Layer: 0
-  m_Name: RedBird (2)
+  m_Name: Yellow Bird
   m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -643,12 +671,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1124581723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d0ac9b95aeb86d489ee9bc6b01241e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1273855dfff892640b039bd27e2fad5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Parent: {fileID: 0}
   RigidBody: {fileID: 1124581726}
   Collider: {fileID: 1124581725}
+  _boostForce: 80
+  _hasBoost: 0
 --- !u!58 &1124581725
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -723,7 +753,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 8d65fab5aa828d7439359b962c57d921, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 876a7e9d1b352d341ada0f78cef0f0fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
