@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class YellowBird : Bird
 {
-    [SerializeField] public float _boostForce = 100;
+    [SerializeField] 
+    public float _boostForce = 100;
     public bool _hasBoost = false;
 
     public void Boost()

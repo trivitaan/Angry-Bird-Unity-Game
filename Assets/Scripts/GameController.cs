@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour
         {
             Enemies[i].OnEnemyDestroyed += CheckGameEnd;
         }
+
         TapCollider.enabled = false;
         SlingShooter.InitiateBird(Birds[0]);
         _shotBird = Birds[0];
@@ -47,6 +48,7 @@ public class GameController : MonoBehaviour
         }
 
         Birds.RemoveAt(0);
+        
         if(Birds.Count > 0)
             SlingShooter.InitiateBird(Birds[0]);
             _shotBird = Birds[0];
